@@ -1,0 +1,17 @@
+Package: warrenr
+Title: A persistently verb for purrr
+Version: 0.0.0.9000
+Authors@R: c(
+  person("Richard", "Cotton", role = c("aut", "cre"), email = "richierocks@gmail.com")
+  person(given = "Ian", family = "Lyttle", email = "ian.lyttle@schneider-electric.com", role = c("ctb"))
+  )
+Description: Richie Cotton made a pull request on the purrr package to add a 
+ function, persistently(). The purrr package has since had a CRAN release; 
+ it is impractical to work with both versions. Hence, this single-function
+ package. Richie was kind enough to allow me to copy-paste his code.
+ I hope that the persistently() will make it into purrr - and that
+ I can delete this repoisitory.
+Depends: R (>= 3.4.1)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
