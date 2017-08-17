@@ -2,7 +2,7 @@ Package: warrenr
 Title: A persistently verb for purrr
 Version: 0.0.0.9000
 Authors@R: c(
-  person("Richard", "Cotton", role = c("aut", "cre"), email = "richierocks@gmail.com")
+  person("Richard", "Cotton", role = c("aut", "cre"), email = "richierocks@gmail.com"),
   person(given = "Ian", family = "Lyttle", email = "ian.lyttle@schneider-electric.com", role = c("ctb"))
   )
 Description: Richie Cotton made a pull request on the purrr package to add a 
@@ -17,3 +17,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/ijlyttle/warrenr
 BugReports: https://github.com/ijlyttle/warrenr/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
+Imports: purrr,
+    stats
