@@ -15,3 +15,5 @@ Depends: R (>= 3.4.1)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/ijlyttle/warrenr
+BugReports: https://github.com/ijlyttle/warrenr/issues
