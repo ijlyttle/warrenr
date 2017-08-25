@@ -11,7 +11,7 @@ Description: Richie Cotton made a pull request on the purrr package to add a
  package. Richie was kind enough to allow me to copy-paste his code.
  I hope that the persistently() will make it into purrr - and that
  I can delete this repoisitory.
-Depends: R (>= 3.4.1)
+Depends: R (>= 3.4.0)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
