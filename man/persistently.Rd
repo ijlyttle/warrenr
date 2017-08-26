@@ -4,13 +4,10 @@
 \alias{persistently}
 \title{Capture side effects.}
 \usage{
-persistently(.f, otherwise = NULL, quiet = TRUE, max_attempts = 5,
-  wait_seconds = 0)
+persistently(.f, quiet = TRUE, max_attempts = 5, wait_seconds = 0)
 }
 \arguments{
 \item{.f}{A function, formula, or atomic vector. See \code{\link[purrr:map]{purrr::map()}}}
-
-\item{otherwise}{Default value to use when an error occurs.}
 
 \item{quiet}{Hide errors (\code{TRUE}, the default), or display them
 as they occur?}
@@ -45,12 +42,16 @@ risky_runif <- function(lo = 0, hi = 1) {
   }
   y
 }
+
 persistent_risky_runif <- persistently(
-  risky_runif, otherwise = -99, quiet = FALSE, wait_seconds = 0.01)
-set.seed(1)
-persistent_risky_runif()
-set.seed(3)
-persistent_risky_runif()
+  risky_runif, quiet = FALSE, wait_seconds = 0.01)
+
+\dontrun{
+  set.seed(1)
+  persistent_risky_runif()
+  set.seed(3)
+  persistent_risky_runif()
+}
 
 
 }

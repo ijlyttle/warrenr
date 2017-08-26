@@ -8,7 +8,6 @@
 #' @param .f A function, formula, or atomic vector. See [purrr::map()]
 #' @param quiet Hide errors (`TRUE`, the default), or display them
 #'   as they occur?
-#' @param otherwise Default value to use when an error occurs.
 #' @param max_attempts Positive integer. `persistent` functions will try
 #'   to run this many times before giving up.
 #' @param wait_seconds Positive number. Base multiplier for time in seconds to
@@ -32,21 +31,25 @@
 #'   }
 #'   y
 #' }
+#'
 #' persistent_risky_runif <- persistently(
-#'   risky_runif, otherwise = -99, quiet = FALSE, wait_seconds = 0.01)
-#' set.seed(1)
-#' persistent_risky_runif()
-#' set.seed(3)
-#' persistent_risky_runif()
+#'   risky_runif, quiet = FALSE, wait_seconds = 0.01)
+#'
+#' \dontrun{
+#'   set.seed(1)
+#'   persistent_risky_runif()
+#'   set.seed(3)
+#'   persistent_risky_runif()
+#' }
 #'
 #'
 #' @export
 #'
-persistently <- function(.f, otherwise = NULL, quiet = TRUE, max_attempts = 5, wait_seconds = 0) {
+persistently <- function(.f, quiet = TRUE, max_attempts = 5,
+                         wait_seconds = 0) {
 
   .f <- purrr::as_mapper(.f)
 
-  force(otherwise)
   force(quiet)
   force(max_attempts)
   force(wait_seconds)
@@ -67,13 +70,12 @@ persistently <- function(.f, otherwise = NULL, quiet = TRUE, max_attempts = 5, w
     }
     if (!quiet) {
       msg <- sprintf(
-        "%s failed after %d tries; returning %s.",
+        "%s failed after %d tries",
         deparse(match.call()),
-        max_attempts,
-        format(otherwise)
+        max_attempts
       )
       message(msg)
     }
-    otherwise
+    stop(answer$error)
   }
 }
