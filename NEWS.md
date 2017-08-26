@@ -1,4 +1,4 @@
-# warrenr 0.0.0.9000
+# warrenr 0.0.1
 
 * removes `otherwise` argument from `persistently()` so that it invokes 
   an error persistence "fails". This way, its behavior is orthogonal to 

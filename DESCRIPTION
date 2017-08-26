@@ -1,6 +1,6 @@
 Package: warrenr
 Title: A persistently verb for purrr
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
   person("Richard", "Cotton", role = c("aut", "cre"), email = "richierocks@gmail.com"),
   person(given = "Ian", family = "Lyttle", email = "ian.lyttle@schneider-electric.com", role = c("ctb"))
