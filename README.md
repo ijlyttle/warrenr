@@ -1,7 +1,7 @@
 # warrenr
 
 The goal of warrenr is to take `persistently()` for a spin. This is based on 
-Richie Rocks' PR to __purrr__, where he proposes `persistently()`. The goal is to merge this stuff into purrr.
+Richie Cotton's PR to __purrr__, where he proposes `persistently()`. The goal is to merge this stuff into purrr.
 
 ## Installation
 
