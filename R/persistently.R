@@ -46,7 +46,7 @@
 #' @export
 #'
 persistently <- function(.f, quiet = TRUE, max_attempts = 5,
-                         wait_seconds = 0) {
+                         wait_seconds = 0.1) {
 
   .f <- purrr::as_mapper(.f)
 
