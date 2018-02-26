@@ -15,7 +15,7 @@ devtools::install_github("ijlyttle/warrenr")
 
 ## Example
 
-Let's say you have an API call that does not work 100% of the time, due to vagaries in the network, etc. 
+Let's say you have an API call that does not work 100% of the time, due to vagaries of the network, etc. 
 
 ```R
 result <- fragile_api_call(arg1 = "foo", ...)

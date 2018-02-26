@@ -4,7 +4,7 @@
 \alias{persistently}
 \title{Capture side effects.}
 \usage{
-persistently(.f, quiet = TRUE, max_attempts = 5, wait_seconds = 0)
+persistently(.f, quiet = TRUE, max_attempts = 5, wait_seconds = 0.1)
 }
 \arguments{
 \item{.f}{A function, formula, or atomic vector. See \code{\link[purrr:map]{purrr::map()}}}
